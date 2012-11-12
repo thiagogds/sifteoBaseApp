@@ -78,7 +78,7 @@ void CubeB::onTouch(unsigned id) {
     if(mCube.isTouching()) {
         String<20> str;
         str <<  mApp->cubeA->name;
-        vid.bg0rom.text(vec(1,6), str);
+        vid.bg0rom.text(vec(1,5), str);
     }
 }
 
@@ -90,7 +90,7 @@ void CubeA::onAccelChange(unsigned id) {
         LOG("Accel A \n");
         if (tilt.x) {
             LOG("Tilt A \n");
-            name << "Mudei o A :)";
+            name = "Mudei o A :)";
         }
     }
 }
