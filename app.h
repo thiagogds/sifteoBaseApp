@@ -20,6 +20,7 @@ public:
     void run();
 
     void onTouch(unsigned id);    
+    void onAccelChange(unsigned id);
 };
 
 

@@ -19,6 +19,7 @@ public:
     VideoBuffer vid;
     void init(); 
     void onTouch(unsigned id);
+    void onAccelChange(unsigned id);
 
 };
 
@@ -34,6 +35,7 @@ public:
     VideoBuffer vid;
     void init();
     void onTouch(unsigned id);
+    void onAccelChange(unsigned id);
 
 };
 

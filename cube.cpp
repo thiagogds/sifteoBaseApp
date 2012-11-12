@@ -46,4 +46,18 @@ void CubeB::onTouch(unsigned id) {
 
 void CubeA::onTouch(unsigned id) {
     vid.bg0rom.text(vec(1,5), mApp->cubeB->name);
+void CubeA::onAccelChange(unsigned id) {
+    unsigned changeFlags = motion.update();
+    auto tilt = motion.tilt;
+
+    if( changeFlags ) {
+        LOG("Accel A \n");
+        if (tilt.x) {
+            LOG("Tilt A \n");
+            name << "Mudei o A :)";
+        }
+    }
+}
+
+void CubeB::onAccelChange(unsigned id) {
 }

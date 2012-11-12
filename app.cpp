@@ -13,6 +13,8 @@ void App::init() {
     cubeB->init();
 
     Events::cubeTouch.set(&App::onTouch, this);
+    Events::cubeAccelChange.set(&App::onAccelChange, this);
+
 }
 
 void App::run() {
@@ -26,5 +28,13 @@ void App::onTouch(unsigned id) {
         default: ; break ;
         case 0: cubeA->onTouch(id); break ;
         case 1: cubeB->onTouch(id); break ;
+    };
+}
+
+void App::onAccelChange(unsigned id) {
+    switch(id) {
+        default: ; break ;
+        case 0: cubeA->onAccelChange(id); break ;
+        case 1: cubeB->onAccelChange(id); break ;
     };
 }
