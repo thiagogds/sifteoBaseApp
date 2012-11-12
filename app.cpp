@@ -4,13 +4,22 @@
 App::App() {
     CubeA cA = CubeA(0,this);
     this->cubeA = &cA;
+
     CubeB cB = CubeB(1,this);
     this->cubeB = &cB;
+
+    CubeC cC = CubeC(2,this);
+    this->cubeC = &cC;
+
+    CubeD cD = CubeD(3,this);
+    this->cubeD = &cD;
 }
 
 void App::init() {
     cubeA->init();
     cubeB->init();
+    cubeC->init();
+    cubeD->init();
 
     Events::cubeTouch.set(&App::onTouch, this);
     Events::cubeAccelChange.set(&App::onAccelChange, this);
